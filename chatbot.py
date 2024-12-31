@@ -14,7 +14,7 @@ def chatbot(prompt:str):
 
     genai_model = genai.GenerativeModel('models/gemini-1.5-flash')
 
-
+    please = 'add'
     response = genai_model.generate_content(prompt)
 
     return response.text
