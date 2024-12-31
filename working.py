@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-
+from chatbot import chatbot
 
 
 #GET : Send data and returing a reponse 
@@ -12,14 +12,9 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-inventory = {
-    1 : {
-        'name':'Milk',
-        'price' : 3.99 , 
-        "quantity" : 40
-    }
-}
 
-@app.get('/get-item/{item_id}')
-def get_item(item_id : int):
-    return inventory[item_id]
+
+@app.get('/')
+def chatbot_app(query : str):
+    response = chatbot(query)
+    return response
