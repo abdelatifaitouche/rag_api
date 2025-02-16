@@ -21,7 +21,7 @@ chroma_collection = chroma_client.get_or_create_collection(name='finance_gpt' , 
 
 
 
-loader = PyPDFLoader('data.pdf')
+loader = PyPDFLoader('ldf2025.pdf')
 data = loader.load()
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size = 1000)
