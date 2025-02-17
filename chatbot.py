@@ -15,7 +15,7 @@ def chatbot(query_text):
     genai.configure(api_key=API_KEY)
 
 
-    genai_model = genai.GenerativeModel('models/gemini-1.5-pro')
+    genai_model = genai.GenerativeModel('models/gemini-2.0-flash')
 
     chroma_client = chromadb.PersistentClient('vector_db')
 
