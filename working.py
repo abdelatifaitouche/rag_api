@@ -15,7 +15,8 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
 origins = [
-    "http://gtdtt.digital"
+    "http://gtdtt.digital",
+    
 ]
 
 app.add_middleware(
