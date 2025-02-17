@@ -24,7 +24,7 @@ def chatbot(query_text):
 
     collection = chroma_client.get_collection(name='finance_gpt' , embedding_function=gemini_ef)
 
-    n_result = 5
+    n_result = 10
 
 
     results = collection.query(
@@ -33,7 +33,7 @@ def chatbot(query_text):
         include=['documents' , 'distances']
     )
 
-    prompt = "en tant que consultant en finance, Repond a cette question en utilisant le Document comme context"
+    prompt = "en tant que consultant expert en tax et finance, Repond a cette question en utilisant le Document comme context, repond sans mentionner que vous chercher depuis un document"
     prompt += f'question : {query_text}'
     prompt += f"Document : {results['documents']}"
 

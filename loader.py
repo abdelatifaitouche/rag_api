@@ -17,6 +17,7 @@ genai_model = genai.GenerativeModel('models/gemini-1.5-flash')
 
 chroma_client = chromadb.PersistentClient(path='vector_db')
 
+
 gemini_ef = embedding_functions.GoogleGenerativeAiEmbeddingFunction(api_key=API_KEY)
 
 chroma_collection = chroma_client.get_or_create_collection(name='finance_gpt' , embedding_function=gemini_ef)
